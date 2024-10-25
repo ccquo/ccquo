@@ -9,15 +9,12 @@ int main(int argc, char* argv) {
         print("MIT License\n", OUT_INFO);
     } else if (argv[1] == "run") {
         if (argv[2] != NULL) {
-            print("error: could not open file", OUT_ERROR);
+            print("error: could not open file\n", OUT_ERROR);
             RETURN_CODE = 1;
         } else {
-            print("error: could not open file that is undefined", OUT_ERROR);
+            print("error: could not open file that is undefined\n", OUT_ERROR);
             RETURN_CODE = 1;
         }
-    } else {
-        print("error: argument invalid or missing.", OUT_ERROR);
-        RETURN_CODE = 1;
     }
 
     return RETURN_CODE;
